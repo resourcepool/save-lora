@@ -1,0 +1,33 @@
+{
+  "name": "save-lora-rescue-hacker",
+  "version": "1.0.0",
+  "description": "MQTT client which monitors and registers LoRa devices in the Save Lora hack game",
+  "scripts": {
+    "watch": "node ./node_modules/nodemon/bin/nodemon ./src/index.js",
+    "start": "node ./src/index.js",
+    "test": "./node_modules/jest/bin/jest.js src"
+  },
+  "author": "Resourcepool",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^5.0.0-alpha.7",
+    "mqtt": "^2.18.8",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "jest-expect-message": "^1.0.2",
+    "jest": "^24.0.0",
+    "nodemon": "^1.18.11"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-expect-message"
+    ]
+  }
+}

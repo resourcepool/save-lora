@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WisNode Controller</title>
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+<img  id="logo-takima" src="./src/asset/takima.svg" width="150" height="50">
+<header>
+    <h1>Saving LoRa</h1>
+    <h2>WisNode Controller</h2>
+</header>
+
+<textarea readonly id="wisnode-serial"></textarea><br>
+
+<div>
+    <button class="my_font push_button blue center" id="connect_port">Connect USB</button>
+    <button class="my_font push_button blue center" disabled="true" id="connect">Join Network</button>
+    <button class="my_font push_button blue center" disabled="true" id="send_location">Send Location</button>
+</div>
+<br>
+<div class="form">
+    <input id="custom-cmd" type="text" class="form__field" placeholder="custom command"
+           onkeypress="if (event.keyCode===13){ document.getElementById('fire-custom-cmd').click();}"/>
+    <button id="fire-custom-cmd" type="button" class="btn btn--primary btn--inside">Send</button>
+</div>
+
+<footer>
+    <div class="right">Visit Takima.fr | François De Guibert • Antoine Lebel • Loïc Ortola</div>
+</footer>
+<script>
+    // You can also require other files to run in this process
+    require('./src/renderer.js')
+
+</script>
+</body>
+</html>
